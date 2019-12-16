@@ -14,54 +14,54 @@ import javafx.collections.ObservableList;
 public class Product {
     
     private ObservableList<Part> associatedParts = FXCollections.observableArrayList();
-    private int id;
-    private String name;
-    private double price;
-    private int stock;
+    private int prodId;
+    private String prodName;
+    private double prodPrice;
+    private int prodStock;
     private int min;
     private int max;
     
     //constructor
     public Product(int id, String name, double price, int stock, int min, int max) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.stock = stock;
+        this.prodId = id;
+        this.prodName = name;
+        this.prodPrice = price;
+        this.prodStock = stock;
         this.min = min;
         this.max = max;
     }
 
     //setters and getters
-    public int getId() {
-        return id;
+    public int getProdId() {
+        return prodId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setProdId(int id) {
+        this.prodId = id;
     }
 
-    public String getName() {
-        return name;
+    public String getProdName() {
+        return prodName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProdName(String name) {
+        this.prodName = name;
     }
 
-    public double getPrice() {
-        return price;
+    public double getProdPrice() {
+        return prodPrice;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setProdPrice(double price) {
+        this.prodPrice = price;
     }
 
-    public int getStock() {
-        return stock;
+    public int getProdStock() {
+        return prodStock;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
+    public void setProdStock(int stock) {
+        this.prodStock = stock;
     }
 
     public int getMin() {

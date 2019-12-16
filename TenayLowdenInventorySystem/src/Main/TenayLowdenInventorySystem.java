@@ -8,6 +8,7 @@ package Main;
 
 import Model.InHousePart;
 import Model.Inventory;
+import Model.OutsourcedPart;
 import Model.Product;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -25,13 +26,13 @@ public class TenayLowdenInventorySystem extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
-    Parent root = FXMLLoader.load(getClass().getResource("/View_Controller/MainScreen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View_Controller/MainScreen.fxml"));
 
-    Scene scene = new Scene(root);
-    scene.setRoot(root);
+        Scene scene = new Scene(root);
+        scene.setRoot(root);
 
-    stage.setScene(scene);
-    stage.show();
+        stage.setScene(scene);
+        stage.show();
     
     }
    
@@ -42,16 +43,19 @@ public class TenayLowdenInventorySystem extends Application {
         //partsTable data
         InHousePart partOne = new InHousePart(355, 1, "Part One", 5.99, 5, 3, 20);
         InHousePart partTwo = new InHousePart(480, 2, "Part Two", 7.99, 8, 2, 15);
-        InHousePart partThree = new InHousePart(559, 3, "Part Three", 2.99, 6, 3, 25);
         Inventory.addPart(partOne);
         Inventory.addPart(partTwo);
-        Inventory.addPart(partThree);
+        OutsourcedPart partFive = new OutsourcedPart("BioWin", 5, "Part Five", 8.99, 7, 2 , 15);
+        Inventory.addPart(partFive);
         
         //productsTable data
-        /*Product prodOne = new Product(1, "Product One", 8.50, 7, 3, 20);
+        Product prodOne = new Product(1, "Product One", 8.50, 7, 3, 20);
         Product prodTwo = new Product(2, "Product Two", 9.00, 6, 2, 18);
+        prodOne.addAssociatedPart(partOne);
+        prodTwo.addAssociatedPart(partTwo);
         Inventory.addProduct(prodOne);
-        Inventory.addProduct(prodTwo);*/
+        Inventory.addProduct(prodTwo);
+        
          
         launch(args);
     }

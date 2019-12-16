@@ -11,54 +11,54 @@ package Model;
  */
 public abstract class Part {
     
-    private int id;
-    private String name;
-    private double price;
-    private int stock;
+    private int partId;
+    private String partName;
+    private double partPrice;
+    private int partStock;
     private int min;
     private int max;
     
     //constructor
     public Part(int id, String name, double price, int stock, int min, int max) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.stock = stock;
+        this.partId = id;
+        this.partName = name;
+        this.partPrice = price;
+        this.partStock = stock;
         this.min = min;
         this.max = max;
     }
 
     //setters and getters
-    public int getId() {
-        return id;
+    public int getPartId() {
+        return partId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPartId(int id) {
+        this.partId = id;
     }
 
-    public String getName() {
-        return name;
+    public String getPartName() {
+        return partName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPartName(String name) {
+        this.partName = name;
     }
 
-    public double getPrice() {
-        return price;
+    public double getPartPrice() {
+        return partPrice;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setPartPrice(double price) {
+        this.partPrice = price;
     }
 
-    public int getStock() {
-        return stock;
+    public int getPartStock() {
+        return partStock;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
+    public void setPartStock(int stock) {
+        this.partStock = stock;
     }
 
     public int getMin() {

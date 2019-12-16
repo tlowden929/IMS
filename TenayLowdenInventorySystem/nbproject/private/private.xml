@@ -3,14 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Tenay/Documents/NetBeansProjects/TenayLowdenInventorySystem/src/Model/OutsourcedPart.java</file>
-            <file>file:/C:/Users/Tenay/Documents/NetBeansProjects/TenayLowdenInventorySystem/src/Model/Part.java</file>
+            <file>file:/C:/Users/Tenay/Documents/NetBeansProjects/TenayLowdenInventorySystem/src/View_Controller/AddProductController.java</file>
             <file>file:/C:/Users/Tenay/Documents/NetBeansProjects/TenayLowdenInventorySystem/src/Main/TenayLowdenInventorySystem.java</file>
-            <file>file:/C:/Users/Tenay/Documents/NetBeansProjects/TenayLowdenInventorySystem/src/Model/Product.java</file>
-            <file>file:/C:/Users/Tenay/Documents/NetBeansProjects/TenayLowdenInventorySystem/src/Model/InHousePart.java</file>
-            <file>file:/C:/Users/Tenay/Documents/NetBeansProjects/TenayLowdenInventorySystem/src/Model/Inventory.java</file>
+            <file>file:/C:/Users/Tenay/Documents/NetBeansProjects/TenayLowdenInventorySystem/src/View_Controller/ModPartController.java</file>
+            <file>file:/C:/Users/Tenay/Documents/NetBeansProjects/TenayLowdenInventorySystem/src/View_Controller/ModProductController.java</file>
+            <file>file:/C:/Users/Tenay/Documents/NetBeansProjects/TenayLowdenInventorySystem/src/View_Controller/AddPartController.java</file>
             <file>file:/C:/Users/Tenay/Documents/NetBeansProjects/TenayLowdenInventorySystem/src/View_Controller/MainScreenController.java</file>
-            <file>file:/C:/Users/Tenay/Documents/NetBeansProjects/TenayLowdenInventorySystem/src/View_Controller/MainScreen.fxml</file>
         </group>
     </open-files>
 </project-private>

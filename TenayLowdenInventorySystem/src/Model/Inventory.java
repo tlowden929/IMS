@@ -12,45 +12,44 @@ package Model;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 
 public class Inventory {
     
     private static ObservableList<Part> allParts = FXCollections.observableArrayList();
     private static ObservableList<Product> allProducts = FXCollections.observableArrayList();
+    
 
     public Inventory() {
     }
    
     //part functionalities
+    //constructs new part and adds to Observable List
     public static void addPart(Part newPart) {
         allParts.add(newPart);
         }
-    
-    public static Part lookupPart(int partId) {
-        Part result = null;
-        for(int i=0; i<allParts.size();i++) {
-           if (partId == allParts.get(i).getId()) {
-              result = allParts.get(i);
-           }
-           else {
-                System.out.println("Part Not Found");
-           }
-        }
-        return result;  
-    }
-    
+
+    //part search by name
     public static ObservableList<Part> lookupPart(String partName) {
         ObservableList<Part> result = FXCollections.observableArrayList();
-        for(int i=0; i<allParts.size(); i++) {
-            if (partName.equals(allParts.get(i).getName())) {
-                result.add(allParts.get(i));
+        for(Part part: Inventory.getAllParts()) {
+            if(part.getPartName().toLowerCase().contains(partName.toLowerCase())) {
+               result.add(part);
             }
-            else {
-                System.out.println("Part Not Found");
-            }
+        }
+        //dialogue box for invalid searches
+        if(result == null || result.isEmpty()){
+            Alert partSearch = new Alert(AlertType.WARNING,
+                "No Matching Parts Found",
+                ButtonType.OK);
+                partSearch.showAndWait();
+                result = Inventory.getAllParts();
         }
         return result;
     }
+    
     
     public static void updatePart(int index, Part selectedPart) {
         allParts.set(index, selectedPart);
@@ -67,28 +66,20 @@ public class Inventory {
         allProducts.add(newProduct);
     }
     
-    public static Product lookupProduct(int productId) {
-        Product result = null;
-        for(int i=0; i<allProducts.size();i++) {
-           if (productId == allProducts.get(i).getId()) {
-              result = allProducts.get(i);
-           }
-           else {
-                System.out.println("Part Not Found");
-           }
-        }
-        return result;  
-    }
-    
+    //product search by name
     public static ObservableList<Product> lookupProduct(String productName) {
         ObservableList<Product> result = FXCollections.observableArrayList();
-        for(int i=0; i<allProducts.size(); i++) {
-            if (productName.equals(allProducts.get(i).getName())) {
-                result.add(allProducts.get(i));
+        for(Product prod: Inventory.getAllProducts()) {
+            if(prod.getProdName().toLowerCase().contains(productName.toLowerCase())) {
+               result.add(prod);
             }
-            else {
-                System.out.println("Part Not Found");
-            }
+        }
+        if(result == null || result.isEmpty()){
+            Alert prodSearch = new Alert(AlertType.WARNING,
+                "No Matching Products Found",
+                ButtonType.OK);
+                prodSearch.showAndWait();
+                result = Inventory.getAllProducts();
         }
         return result;
     }
